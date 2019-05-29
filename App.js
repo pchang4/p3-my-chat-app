@@ -1,5 +1,5 @@
-import React from 'react'
-import Chatkit from '@pusher/chatkit-client'
+// import React from 'react'
+// import Chatkit from '@pusher/chatkit-client'
 import MessageList from './components/MessageList'
 import SendMessageForm from './components/SendMessageForm'
 import RoomList from './components/RoomList'
@@ -57,7 +57,7 @@ class App extends React.Component {
         this.currentUser.subscribeToRoom({
             roomId: roomId,
             hooks: {
-                onNewMessage: message => {
+                onMessage: message => {
                     this.setState({
                         messages: [...this.state.messages, message]
                     })
